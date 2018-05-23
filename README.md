@@ -21,7 +21,7 @@ The SmartJP can be installed starting from the SmartJP.zip file. Once you have e
  ## Starting up SmartJP
  To start the SmartJP, from the main directory, run the following command:
  
- <i>java -Xmx2G -jar SmartJp.jar  --router current --graphs graphs --server</b>
+ <i>java -Xmx2G -jar SmartJp.jar  --router current --graphs graphs --server</i>
  
  * --router specifies the name of the router we want to use.
  * --graphs specifies the graph directory
