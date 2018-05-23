@@ -10,7 +10,7 @@ The SmartJP can be installed starting from the SmartJP.zip file. Once you have e
 - /graphs
    - /current
      - Graph.obj
-     - map.som
+     - map.osm
      - router-config.json
      - trento-gtfs.zip
     
