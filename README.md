@@ -2,17 +2,17 @@
 A Model-Driven Solution to Support Smart Mobility Planning
 
 
-# Installation Instructions - SmartJP
+# Installation Instructions
 The SmartJP can be installed starting from the SmartJP.zip file. Once you have extracted this zip file, you should have the folders and files listed below. <b>Note:</b> the GTFS ZIP files must not be extracted.
 
 * SmartJP.jar, the Open Trip Planner (OTP) - based application, in a single runnable JAR file. This has been compiled from a modified version of the OTP (http://www.opentripplanner.org/) source code. The modifications are related to the implemented "updaters" needed to support the management of the multiple mobility views realized in the approach: 1)Mobility Challenges; 2)Mobility Resources; 3)Mobility Remarks.
 
-/graphs
-  /current
-    Graph.obj
-    map.osm
-    router-config.json
-    trento-gtfs.zip
+- /graphs
+   - /current
+     - Graph.obj
+     - map.som
+     - router-config.json
+     - trento-gtfs.zip
     
  * router-config.son: a configuration file for OTP specifying the "real-time OTP Graph updaters" types and their urls. It is read when the OTP server is started.
  
