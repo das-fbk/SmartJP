@@ -1,7 +1,6 @@
 # SmartJP
 A Model-Driven Solution to Support Smart Mobility Planning
 
-
 # Installation Instructions
 The SmartJP can be installed starting from the SmartJP.zip file. Once you have extracted this zip file, you should have the folders and files listed below. <b>Note:</b> the GTFS ZIP files must not be extracted.
 
@@ -18,7 +17,8 @@ The SmartJP can be installed starting from the SmartJP.zip file. Once you have e
  
  * Graph.obj, map.osm, trento-gtfs.zip: it specifies every locations in the Trento (Italy) region and how to travel between them. It has been compiled using Open Street Map (https://www.openstreetmap.org/) data (map.osm file) for the street and path network and GTFS (trento-gtfs-zip file) data for transit scheduling.
  
- ## Starting up SmartJP
+The modelling layer is made-up of two different set of Eclipse plug-ins. Since the project is open source and under continuous development, we do not release pre-compiles packages. This means that you will need to have a working Eclipse installation with the necessary modelling plug-ins to use the mobility models. The current version is developed on Eclipse Modelling Tools, Version: Oxygen.3a, Release (4.7.3a), Build id: 20180405-1200. You can download the modelling tools package here https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/oxygen3a . Moreover, since the code layer generators are developed with Acceleo (a Model-to-Text transformation plug-in), you will need to add Acceleo to your modelling tools installation (please read the Eclipse and/or Acceleo documentation to complete this step). Once ready with the mentioned installation, you will have two different Eclipse projects in this repository,  
+## Starting up SmartJP
  To start the SmartJP, from the main directory, run the following command:
  
  <i>java -Xmx2G -jar SmartJp.jar  --router current --graphs graphs --server</i>
