@@ -101,6 +101,12 @@ The modelling approach adopted in our solution is based on the separation of con
 ## Mobility Challenges View
 The model depicted in the following picture includes the definition of means of trasportation and their relationships when considered for planning. Moreover, it is possible to specify specific characteristics of available routes, as well as travel preferences in terms of planning parameters.
 
+<p align="center">
+  <img src="https://github.com/das-fbk/SmartJP/blob/master/MobilityChallengesModel.png" width="100%"/>
+</p>
+
+Notably, the example specifies that whenever the selected means of transportation are <i>Bus</i> or <i>Transit</i> a parameter about the maximum walking distance acceptable for a travel plan has to be set. In turn, the value for such a parameter, that is <i>maxWalkingDistance</i>, is set to 500m by default as per city administration policies. These values can be modified by user's preferences, green policies, and so forth.
+
 ## Contributors
 
 This study has been designed, developed, and reported by the following investigators:
