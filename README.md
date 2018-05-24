@@ -105,7 +105,14 @@ The model depicted in the following picture includes the definition of means of 
   <img src="https://github.com/das-fbk/SmartJP/blob/master/MobilityChallengesModel.png" width="100%"/>
 </p>
 
-Notably, the example specifies that whenever the selected means of transportation are <i>Bus</i> or <i>Transit</i>, it has to be established how much the user is willing to walk. In this particular case, if the user prefers a <i>leastwalking</i> route, a parameter about the maximum walking distance acceptable for a travel plan has to be set. In turn, the value for such a parameter, that is <i>maxWalkingDistance</i>, is set to 500m by default as per city administration policies. These values might be modified by user's preferences, green policies, and so forth.
+Notably, the example specifies that whenever the selected means of transportation are <i>Bus</i> or <i>Transit</i>, it has to be established how much the user is willing to walk. In this particular case, if the user prefers a <i>leastWalking</i> route, a parameter about the maximum walking distance acceptable for a travel plan has to be set. In turn, the value for such a parameter, that is <i>maxWalkDistance</i>, is set to 500m by default as per city administration policies. These values might be modified by user's preferences, green policies, and so forth.
+
+## Mobility Resources View
+This view allows to set up the resources due to mobility in a certain municipality. For example, the model shown in the picture includes <i>BikeSharing</i> and <i>Bus</i> resources. The specification is compatible with the GTFS format to enable exporting model contents towards the coding layer.
+
+<p align="center">
+  <img src="https://github.com/das-fbk/SmartJP/blob/master/MobilityResourcesModel.png" width="100%"/>
+</p>
 
 ## Contributors
 
