@@ -13,11 +13,22 @@ The SmartJP can be installed starting from the SmartJP.zip file. Once you have e
      - router-config.json
      - trento-gtfs.zip
     
- * router-config.json: a configuration file for OTP specifying the "real-time OTP Graph updaters" types and their urls. It is read when the OTP server is started.
+* router-config.json: a configuration file for OTP specifying the "real-time OTP Graph updaters" types and their urls. It is read when the OTP server is started.
  
- * Graph.obj, map.osm, trento-gtfs.zip: it specifies every locations in the Trento (Italy) region and how to travel between them. It has been compiled using Open Street Map (https://www.openstreetmap.org/) data (map.osm file) for the street and path network and GTFS (trento-gtfs-zip file) data for transit scheduling.
+* Graph.obj, map.osm, trento-gtfs.zip: it specifies every locations in the Trento (Italy) region and how to travel between them. It has been compiled using Open Street Map (https://www.openstreetmap.org/) data (map.osm file) for the street and path network and GTFS (trento-gtfs-zip file) data for transit scheduling.
  
-The modelling layer is made-up of two different set of Eclipse plug-ins. Since the project is open source and under continuous development, we do not release pre-compiles packages. This means that you will need to have a working Eclipse installation with the necessary modelling plug-ins to use the mobility models. The current version is developed on Eclipse Modelling Tools, Version: Oxygen.3a, Release (4.7.3a), Build id: 20180405-1200. You can download the modelling tools package here https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/oxygen3a . Moreover, since the code layer generators are developed with Acceleo (a Model-to-Text transformation plug-in), you will need to add Acceleo to your modelling tools installation (please read the Eclipse and/or Acceleo documentation to complete this step). Once ready with the mentioned installation, you will have two different Eclipse projects in this repository,  
+The modelling layer is made-up of two different set of Eclipse plug-ins. Since the project is open source and under continuous development, we do not release pre-compiles packages. This means that you will need to have a working Eclipse installation with the necessary modelling plug-ins to use the mobility models. The current version is developed on Eclipse Modelling Tools, Version: Oxygen.3a, Release (4.7.3a), Build id: 20180405-1200. You can download the modelling tools package at https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/oxygen3a . Moreover, since the code layer generators are developed with Acceleo (a Model-to-Text transformation plug-in), you will need to add Acceleo to your modelling tools installation (please read the Eclipse and/or Acceleo documentation to complete this step). Once ready with the mentioned installation, you will have two different Eclipse projects in this repository: 
+
+* MobilityViewMetamodels.zip, the set of plug-ins by which the mobility modelling views are defined (i.e. their modelling languages). You have to import the archive as an existing project in Eclipse. Once successfully imported, the project has to be run as an Eclipse Application, that we will call Mobility Modelling Environment. In the Mobility Modelling Environment is possible to define models that conform to the mobility views; they can be created as instances of corresponding Example EMF Model Creation Wizards, NewTravelPlanner, MobilityResource, and MapNotes, respectively.
+
+* CodeCentricMobilityGenerators.zip, the set of plug-ins delivering the generators for the code layer. These plug-ins are based on the modelling languages defined above, so they must be run on the Mobility Modelling Environment. This archive must be imported as an existing project in the Mobility Modelling Environment, and comes with three different subprojects (with prefix org.eclipse.acceleo.module):
+
+- NewPolicyGenerator, a transformation that takes in input a .newtravelplanner model (Mobility Challenges View) and generates a corresponding .java file implementing the planning set-up specified in the model; 
+- MobilityResourceJSONSerializer, a transformation that takes in input a .mobilityresources model (Mobility Resources View) and generates .json files encoding the available mobility resources;
+- MobilityRemarksJSONSerializer, a transformation that takes as input a .mapnotes model (Mobiliy Remarks View) and generates .json files encoding the remarks triggering possible planning updates.
+
+It is worth noting again that we provide a development environment, so the transformations have to be run through the Acceleo development tools (for specific instructions, please refer to the Acceleo documentation).
+
 ## Starting up SmartJP
  To start the SmartJP, from the main directory, run the following command:
  
@@ -113,6 +124,9 @@ This view allows to set up the resources due to mobility in a certain municipali
 <p align="center">
   <img src="https://github.com/das-fbk/SmartJP/blob/master/MobilityResourcesModel.png" width="100%"/>
 </p>
+
+## Mobility Remarks View
+
 
 ## Contributors
 
