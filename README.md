@@ -23,9 +23,9 @@ The modelling layer is made-up of two different set of Eclipse plug-ins. Since t
 
 * CodeCentricMobilityGenerators.zip, the set of plug-ins delivering the generators for the code layer. These plug-ins are based on the modelling languages defined above, so they must be run on the Mobility Modelling Environment. This archive must be imported as an existing project in the Mobility Modelling Environment, and comes with three different subprojects (with prefix org.eclipse.acceleo.module):
 
-- NewPolicyGenerator, a transformation that takes in input a .newtravelplanner model (Mobility Challenges View) and generates a corresponding .java file implementing the planning set-up specified in the model; 
-- MobilityResourceJSONSerializer, a transformation that takes in input a .mobilityresources model (Mobility Resources View) and generates .json files encoding the available mobility resources;
-- MobilityRemarksJSONSerializer, a transformation that takes as input a .mapnotes model (Mobiliy Remarks View) and generates .json files encoding the remarks triggering possible planning updates.
+  - NewPolicyGenerator, a transformation that takes in input a .newtravelplanner model (Mobility Challenges View) and generates a corresponding .java file implementing the planning set-up specified in the model; 
+  - MobilityResourceJSONSerializer, a transformation that takes in input a .mobilityresources model (Mobility Resources View) and generates .json files encoding the available mobility resources;
+  - MobilityRemarksJSONSerializer, a transformation that takes as input a .mapnotes model (Mobiliy Remarks View) and generates .json files encoding the remarks triggering possible planning updates.
 
 It is worth noting again that we provide a development environment, so the transformations have to be run through the Acceleo development tools (for specific instructions, please refer to the Acceleo documentation).
 
@@ -126,7 +126,11 @@ This view allows to set up the resources due to mobility in a certain municipali
 </p>
 
 ## Mobility Remarks View
+This view is used to specify, indeed, remarks affecting certain mobility resources and/or geographical areas. The resource remarks are linked with the resources, so that it will not be possible to introduce remarks on non existing resources. In this example, remarks are defined for blocked roads and a bus route cancelled over a specific date range. These remarks are transformed to the .json files shown earlier in this document.
 
+<p align="center">
+  <img src="https://github.com/das-fbk/SmartJP/blob/master/MobilityRemarksModel.png" width="100%"/>
+</p>
 
 ## Contributors
 
