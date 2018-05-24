@@ -105,7 +105,7 @@ The model depicted in the following picture includes the definition of means of 
   <img src="https://github.com/das-fbk/SmartJP/blob/master/MobilityChallengesModel.png" width="100%"/>
 </p>
 
-Notably, the example specifies that whenever the selected means of transportation are <i>Bus</i> or <i>Transit</i> a parameter about the maximum walking distance acceptable for a travel plan has to be set. In turn, the value for such a parameter, that is <i>maxWalkingDistance</i>, is set to 500m by default as per city administration policies. These values can be modified by user's preferences, green policies, and so forth.
+Notably, the example specifies that whenever the selected means of transportation are <i>Bus</i> or <i>Transit</i>, it has to be established how much the user is willing to walk. In this particular case, if the user prefers a <i>leastwalking</i> route, a parameter about the maximum walking distance acceptable for a travel plan has to be set. In turn, the value for such a parameter, that is <i>maxWalkingDistance</i>, is set to 500m by default as per city administration policies. These values might be modified by user's preferences, green policies, and so forth.
 
 ## Contributors
 
