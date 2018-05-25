@@ -1,6 +1,8 @@
 # SmartJP
 A Model-Driven Solution to Support Smart Mobility Planning
 
+[![See our solution in action](https://github.com/das-fbk/SmartJP/blob/master/DemoImage.png)](https://www.youtube.com/watch?v=SKPHN_9vDeUl-Y "See ")
+
 # Installation Instructions
 The SmartJP can be installed starting from the SmartJP.zip file. Once you have extracted this zip file, you should have the folders and files listed below. <b>Note:</b> the GTFS ZIP files must not be extracted.
 
